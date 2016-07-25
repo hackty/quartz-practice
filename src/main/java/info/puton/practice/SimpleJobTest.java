@@ -8,14 +8,15 @@ import java.util.Date;
 /**
  * Created by taoyang on 2016/7/25.
  */
-public class RunMyJob {
+public class SimpleJobTest {
 
     public static void main(String[] args) throws SchedulerException {
 
-        // Grab the Scheduler instance from the Factory
-        Scheduler scheduler = null;
+        //任务在下一个整秒运行
 
-        scheduler = StdSchedulerFactory.getDefaultScheduler();
+        // Grab the Scheduler instance from the Factory
+        Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
+
         // and start it off
         scheduler.start();
 
@@ -24,7 +25,7 @@ public class RunMyJob {
                 .withIdentity("job1", "group1")
                 .build();
 
-        Date runTime = DateBuilder.evenMinuteDate(new Date());
+        Date runTime = DateBuilder.evenSecondDate(new Date());
 
         // Trigger the job to run now, and then repeat every 40 seconds
         Trigger trigger = TriggerBuilder.newTrigger()

@@ -12,6 +12,12 @@ import java.util.Calendar;
 public class MyJob implements Job {
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
         System.out.println("i love puton.info");
+
         System.out.println("任务正在执行，执行时间: " + Calendar.getInstance().getTime());
+
+        String jobName = jobExecutionContext.getJobDetail().getKey().getName();
+        System.out.println("任务Key:" + jobName);
+
+
     }
 }
