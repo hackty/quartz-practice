@@ -27,9 +27,12 @@ public class SimpleJobTest {
 
         Date runTime = DateBuilder.evenSecondDate(new Date());
 
-        // Trigger the job to run now, and then repeat every 40 seconds
+        // Trigger the job to run now, and then repeat every 2 seconds
         Trigger trigger = TriggerBuilder.newTrigger()
                 .withIdentity("trigger1", "group1")
+                .withSchedule(SimpleScheduleBuilder.simpleSchedule()
+                        .withIntervalInSeconds(2)
+                        .repeatForever())
 //                .startNow()
                 .startAt(runTime)
                 .build();
