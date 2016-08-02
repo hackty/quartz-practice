@@ -41,23 +41,13 @@
     </dependency>
     <!--teradata end-->
 
-    <!--<dependency>-->
-      <!--<groupId>com.teradata</groupId>-->
-      <!--<artifactId>terajdbc4</artifactId>-->
-      <!--<version>13.10.0.1</version>-->
-    <!--</dependency>-->
-    <!--<dependency>-->
-      <!--<groupId>com.teradata</groupId>-->
-      <!--<artifactId>tdgssconfig</artifactId>-->
-      <!--<version>13.10.0.1</version>-->
-    <!--</dependency>-->
-
+    <!--postgres start-->
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
       <version>9.4.1209.jre7</version>
     </dependency>
-
+    <!--postgres end-->
 
     <dependency>
       <groupId>org.slf4j</groupId>
