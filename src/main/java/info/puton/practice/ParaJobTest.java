@@ -15,11 +15,11 @@ public class ParaJobTest {
         SchedulerFactory factory = new StdSchedulerFactory();
         Scheduler scheduler = factory.getScheduler();
         Date runTime = DateBuilder.nextGivenSecondDate(null, 10);
-        JobDetail job = JobBuilder.newJob(MyParaJob.class).withIdentity("job1", "group1").build();
+        JobDetail job = JobBuilder.newJob(MyParaJob.class).withIdentity("job5", "group5").build();
         job.getJobDataMap().put(MyParaJob.JOB_DATA_MAP_KEY, 10);
         // 每隔2秒执行，重复5次
         Trigger trigger = TriggerBuilder.newTrigger()
-                .withIdentity("trigger1", "group1")
+                .withIdentity("trigger5", "group5")
                 .withSchedule(SimpleScheduleBuilder
                         .simpleSchedule()
                         .withIntervalInSeconds(2)

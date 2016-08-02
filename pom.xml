@@ -16,15 +16,53 @@
 
   <dependencies>
 
+    <!-- https://mvnrepository.com/artifact/org.quartz-scheduler/quartz -->
     <dependency>
       <groupId>org.quartz-scheduler</groupId>
       <artifactId>quartz</artifactId>
-      <version>2.2.1</version>
+      <version>2.2.3</version>
     </dependency>
     <dependency>
       <groupId>org.quartz-scheduler</groupId>
       <artifactId>quartz-jobs</artifactId>
-      <version>2.2.1</version>
+      <version>2.2.3</version>
+    </dependency>
+
+    <!--teradata start-->
+    <dependency>
+      <groupId>info.puton.driver</groupId>
+      <artifactId>terajdbc4</artifactId>
+      <version>15.10.0.14</version>
+    </dependency>
+    <dependency>
+      <groupId>info.puton.driver</groupId>
+      <artifactId>tdgssconfig</artifactId>
+      <version>15.10.0.14</version>
+    </dependency>
+    <!--teradata end-->
+
+    <!--<dependency>-->
+      <!--<groupId>com.teradata</groupId>-->
+      <!--<artifactId>terajdbc4</artifactId>-->
+      <!--<version>13.10.0.1</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>com.teradata</groupId>-->
+      <!--<artifactId>tdgssconfig</artifactId>-->
+      <!--<version>13.10.0.1</version>-->
+    <!--</dependency>-->
+
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>9.4.1209.jre7</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.2</version>
     </dependency>
 
     <dependency>

@@ -19,9 +19,9 @@ public class OnceJobTest {
 
         //5秒后触发事件，只触发一次
         runTime = DateBuilder.nextGivenSecondDate(null, 5);
-        job = JobBuilder.newJob(MyJob.class).withIdentity("job1", "group1").build();
+        job = JobBuilder.newJob(MyJob.class).withIdentity("job2", "group2").build();
         trigger = TriggerBuilder.newTrigger()
-                .withIdentity("trigger1", "group1")
+                .withIdentity("trigger2", "group2")
                 .startAt(runTime)
                 .build();
         scheduler.scheduleJob(job, trigger);

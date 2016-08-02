@@ -16,23 +16,23 @@ public class CronJobTest {
         JobDetail job;
         Trigger trigger;
 
-        job = JobBuilder.newJob(MyJob.class).withIdentity("job1", "group1").build();
+        job = JobBuilder.newJob(MyJob.class).withIdentity("job4", "group4").build();
         // @NOTICE
         // 与SimpleTrigger对比：类不同了，现在的是Trigger的子类CronTrigger；withSchedule中的参数变为CronScheduleBuilder了
         // CronScheduleBuilder可以通过类似"0/3 * * * * ?"这种表达式来创建定时任务
         // 当前这个表达式的定义是每个秒是3秒倍数时，或者是0秒的时候，都触发任务
-        trigger = TriggerBuilder.newTrigger().withIdentity("trigger1", "group1")
-                .withSchedule(CronScheduleBuilder.cronSchedule("0/19 * * * * ?")).build();
+        trigger = TriggerBuilder.newTrigger().withIdentity("trigger4", "group4")
+                .withSchedule(CronScheduleBuilder.cronSchedule("0/3 * * * * ?")).build();
 
         scheduler.scheduleJob(job, trigger);
 
         scheduler.start();
-        try {
-            // 等待60秒查看效果
-            Thread.sleep(60L * 1000L);
-        } catch (Exception e) {
-        }
-        scheduler.shutdown(true);
+//        try {
+//            // 等待60秒查看效果
+//            Thread.sleep(60L * 1000L);
+//        } catch (Exception e) {
+//        }
+//        scheduler.shutdown(true);
     }
 
     /*

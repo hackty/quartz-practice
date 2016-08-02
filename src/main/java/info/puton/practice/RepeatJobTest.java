@@ -19,9 +19,9 @@ public class RepeatJobTest {
 
         //任务5秒钟后执行，并且开始执行之后，每隔1秒钟再执行一次，重复3次（算上第1次一共4次）
         runTime = DateBuilder.nextGivenSecondDate(null, 5);
-        job = JobBuilder.newJob(MyJob.class).withIdentity("job2", "group1").build();
+        job = JobBuilder.newJob(MyJob.class).withIdentity("job3", "group3").build();
         trigger = TriggerBuilder.newTrigger()
-                .withIdentity("trigger2", "group1")
+                .withIdentity("trigger3", "group3")
                 .withSchedule(SimpleScheduleBuilder.simpleSchedule()
                         .withRepeatCount(3)
                         .withIntervalInSeconds(1))
