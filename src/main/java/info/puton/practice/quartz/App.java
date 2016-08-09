@@ -1,4 +1,4 @@
-package info.puton.practice;
+package info.puton.practice.quartz;
 
 /**
  * Hello world!

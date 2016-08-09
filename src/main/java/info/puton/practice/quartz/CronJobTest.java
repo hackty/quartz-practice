@@ -1,9 +1,7 @@
-package info.puton.practice;
+package info.puton.practice.quartz;
 
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
-
-import java.util.Date;
 
 /**
  * Created by taoyang on 2016/7/25.
